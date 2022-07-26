@@ -7,9 +7,8 @@ app = Flask(  # Create a flask app
     static_folder='static'  # Name of directory for static files
 )
 
-# Your code should be below
-
-
+def home():
+    return render_template("home.html")
 
 
 # Your code should be above
