@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <style> 
-        .imgs{
+        #img2{
             position: relative;
-            top: 100px;
-            left:  500px;
+            top: 260px;
+            left:  540px;
+            border: 5px solid #555;
         }
         
+        #img{
+            position: relative;
+            top: 5px;
+            left:  30px;
+        }
+        #img3{
+            position: relative;
+            top: 5px;
+            left: 275px;
+            border: 5px solid #555;
+        }
+        #img4{
+            position: relative;
+            top: 515px;
+            left:11px; 
+            border: 5px solid #555;
+        }
     </style>
     <meta charset="UTF-8">
-    <img src= "static/ebay1.png"></img>
-    <div><a class="link" href="cart.html"> Chart </a></div>
-    <a class="link" href="product.html" >Products </a>
+    <img id='img' src= "static/ebay1.png"></img>
+    <div><a href="{{ url_for('cart') }}"> Cart</a></div>
+    <div><a href="{{ url_for('product') }}" >Products </a></div>
+    <div><input type="text" placeholder="Search.."></div>
+</div>
 </head>
 <body>
-    <div>
-{%for i in cat%}
-<h5> {{i}}  </h5>
-{%endfor%}
+<img id="img2" src="static/phone1.jpeg" width="250" height="250"></img>
+<img id='img3' src= "static/shoe.png" width="250" height="250"></img>
+<img id="img4" src="static/headphones.png" width="250" height="250">
 
-</div>
-<img id="img" src="static/phone1.jpeg"></img>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

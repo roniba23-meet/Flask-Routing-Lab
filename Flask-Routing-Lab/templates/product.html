@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Product</title>
+	 <style> 
+        #img{
+            position: relative;
+            top: 5px;
+            left:  30px;
+        }
+    </style>
+	<meta charset="UTF-8">
+	<img id='img' src= "static/ebay1.png"></img>
 </head>
 <body>
-
+<div class="card">
+  <h2> Phone </h2>
+  <img src="static/phone1.jpeg" width="350" height="350"> </img>
+  <p class="price">$1999.99</p>
+  <div><a href="{{ url_for('cart') }}"> Add To Cart </a></div>
+  <a href="{{ url_for('home') }}"> Home </a>
+</div>
 </body>
 </html>

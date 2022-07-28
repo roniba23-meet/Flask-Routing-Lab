@@ -6,11 +6,19 @@ app = Flask(  # Create a flask app
     template_folder='templates',  # Name of html file folder
     static_folder='static'  # Name of directory for static files
 )
-cat= ["Saved", "Clothes", "Electronics", "Sporst", "Pets", "Home & Garden"]
+
 @app.route('/')
 def home():
-    return render_template("home.html", cat=cat)
+    return render_template("home.html")
 
+@app.route('/home.html')
+def product():
+    print("lkkl")
+    return render_template("product.html")
+
+@app.route('/product')
+def cart():
+    return render_template("cart.html")
 
 # Your code should be above
 if __name__ == "__main__":  # Makes sure this is the main process
